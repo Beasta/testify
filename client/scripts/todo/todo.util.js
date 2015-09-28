@@ -13,7 +13,10 @@
 			return validTodoRe.test(name);
 		},
 		getUniqueId: function() {
-			return lastId++;
+			return ++lastId;
+		},
+		getLastId: function() {
+			return lastId;
 		}
 	};
 }());
