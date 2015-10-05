@@ -35,4 +35,5 @@ describe('the todo.util methods', function() {
       var currentID = todo.util.getLastId();
       expect(todo.util.getUniqueId()).to.equal(++currentID);
     });
+
 });

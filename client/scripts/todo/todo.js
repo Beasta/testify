@@ -1,5 +1,6 @@
 var todo = {
   setup: function(todos){
+    console.log('calling todo.setup');
     todo.app = new todo.App({
       el: '#todo-app',
       items: todos
@@ -12,6 +13,7 @@ var todo = {
       method: 'GET',
       endpoint: 'http://localhost:3000/todos'
     }, function(err, res){
+
       if (err) { throw err; }
       if (!debug) {
         todo.setup(res.todos);
